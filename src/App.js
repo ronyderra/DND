@@ -1,12 +1,13 @@
 import "./styles.css";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-
+import { useSelector, useDispatch } from 'react-redux'
 import "bootstrap/dist/css/bootstrap.min.css";
-import userdata from "./tempData.json";
 import { useState } from "react";
 
 export default function App() {
-  const [users, setUsers] = useState(userdata.data);
+  const employeeTableData = useSelector((state) => state.employeeTable.data)
+  const [users, setUsers] = useState(employeeTableData);
+  const dispatch = useDispatch()
 
   const handleDragEnd = (e) => {
     if (!e.destination) return;
