@@ -6,12 +6,10 @@ import Ellipse77 from './Ellipse77.png'
 import Group73 from './Group73.png'
 import barChart6 from './barChart6.png'
 import { useState } from "react";
-import { addRow } from './slices/employeeTable'
 
 export default function App() {
   const employeeTableData = useSelector((state) => state.employeeTable.data)
   const [employees, setEmployees] = useState(employeeTableData);
-  const dispatch = useDispatch()
 
   const handleDragEnd = (e) => {
     if (!e.destination) return;
@@ -69,14 +67,6 @@ export default function App() {
             </Droppable>
           </table>
         </DragDropContext>
-        <button onClick={() => dispatch(addRow({
-          "id": 316287341,
-          "name": "יואל",
-          "overLimitHours": '4:00',
-          "manualHours": '4:00',
-          "hours": '155:00',
-          "sumHours": '159:00'
-        }))}>add</button>
       </div>
     </div>
   );
