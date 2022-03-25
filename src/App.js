@@ -8,15 +8,14 @@ import { useState } from "react";
 
 export default function App() {
   const employeeTableData = useSelector((state) => state.employeeTable.data)
-  const [users, setUsers] = useState(employeeTableData);
-  const dispatch = useDispatch()
+  const [employees, setEmployees] = useState(employeeTableData);
 
   const handleDragEnd = (e) => {
     if (!e.destination) return;
-    let tempData = Array.from(users);
+    let tempData = Array.from(employees);
     let [source_data] = tempData.splice(e.source.index, 1);
     tempData.splice(e.destination.index, 0, source_data);
-    setUsers(tempData);
+    setEmployees(tempData);
   };
   return (
     <div className="container">
@@ -39,7 +38,7 @@ export default function App() {
                 ref={provider.innerRef}
                 {...provider.droppableProps}
               >
-                {users?.map((user, index) => (
+                {employees?.map((user, index) => (
                   <Draggable
                     key={user.name}
                     draggableId={user.name}

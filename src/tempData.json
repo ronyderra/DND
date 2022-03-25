@@ -28,6 +28,14 @@
       },
       {
         "id": 316287341,
+        "name": "יותם",
+        "overLimitHours": 32,
+        "manualHours": 45,
+        "hours": 56,
+        "sumHours": 21
+      },
+      {
+        "id": 316287341,
         "name": "חיים",
         "overLimitHours": 32,
         "manualHours": 45,
