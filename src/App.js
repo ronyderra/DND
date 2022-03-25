@@ -17,21 +17,21 @@ export default function App() {
     tempData.splice(e.destination.index, 0, source_data);
     setEmployees(tempData);
   };
-  
+
   return (
     <div className="container">
       <DragDropContext onDragEnd={handleDragEnd}>
         <table className="table">
-          <thead className="table-head">
-            <tr>
-              <th>אפשרויות</th>
-              <th>סך הכל שעות</th>
-              <th>שעות</th>
-              <th>שעות חריגות</th>
-              <th>שם עובד</th>
-              <th>מספר תז</th>
-            </tr>
-          </thead>
+              <thead className="table-head">
+                <tr>
+                  <th>אפשרויות</th>
+                  <th>סך הכל שעות</th>
+                  <th>שעות</th>
+                  <th>שעות חריגות</th>
+                  <th>שם עובד</th>
+                  <th>מספר תז</th>
+                </tr>
+              </thead>
           <Droppable droppableId="droppable-1">
             {(provider) => (
               <tbody
@@ -39,20 +39,20 @@ export default function App() {
                 ref={provider.innerRef}
                 {...provider.droppableProps}
               >
-                {employees?.map((user, index) => (
+                {employees?.map((employe, index) => (
                   <Draggable
-                    key={user.name}
-                    draggableId={user.name}
+                    key={employe.name}
+                    draggableId={employe.name}
                     index={index}
                   >
                     {(provider) => (
                       <tr {...provider.draggableProps} ref={provider.innerRef}>
                         <td {...provider.dragHandleProps}><img src={Group73} /></td>
-                        <td>{user.sumHours}</td>
-                        <td>{user.hours}</td>
-                        <td>{user.overLimitHours}</td>
-                        <td>{user.name}<img className="nameImage" src={Ellipse77} /></td>
-                        <td>{user.id}</td>
+                        <td>{employe.sumHours}</td>
+                        <td>{employe.hours}</td>
+                        <td>{employe.overLimitHours}</td>
+                        <td>{employe.name}<img className="nameImage" src={Ellipse77} /></td>
+                        <td>{employe.id}</td>
                       </tr>
                     )}
                   </Draggable>
