@@ -4,50 +4,50 @@ const employeeTableData = {
     {
       "id": 316287341,
       "name": "ראובן",
-      "overLimitHours": 32,
-      "manualHours": 45,
-      "hours": 56,
-      "sumHours": 21
+      "overLimitHours": '4:00',
+      "manualHours": '4:00',
+      "hours": '155:00',
+      "sumHours": '159:00'
     },
     {
       "id": 316287341,
       "name": "תומר",
-      "overLimitHours": 32,
-      "manualHours": 45,
-      "hours": 56,
-      "sumHours": 21
+      "overLimitHours": '4:00',
+      "manualHours": '4:00',
+      "hours": '155:00',
+      "sumHours": '159:00'
     },
     {
       "id": 316287341,
       "name": "שרון",
-      "overLimitHours": 32,
-      "manualHours": 45,
-      "hours": 56,
-      "sumHours": 21
+      "overLimitHours": '4:00',
+      "manualHours": '4:00',
+      "hours": '155:00',
+      "sumHours": '159:00'
     },
     {
       "id": 316287341,
       "name": "יותם",
-      "overLimitHours": 32,
-      "manualHours": 45,
-      "hours": 56,
-      "sumHours": 21
+      "overLimitHours": '4:00',
+      "manualHours": '4:00',
+      "hours": '155:00',
+      "sumHours": '159:00'
     },
     {
       "id": 316287341,
       "name": "חיים",
-      "overLimitHours": 32,
-      "manualHours": 45,
-      "hours": 56,
-      "sumHours": 21
+      "overLimitHours": '4:00',
+      "manualHours": '4:00',
+      "hours": '155:00',
+      "sumHours": '159:00'
     },
     {
       "id": 316287341,
       "name": "סימון",
-      "overLimitHours": 32,
-      "manualHours": 45,
-      "hours": 56,
-      "sumHours": 21
+      "overLimitHours": '4:00',
+      "manualHours": '4:00',
+      "hours": '155:00',
+      "sumHours": '159:00'
     }
   ]
 }

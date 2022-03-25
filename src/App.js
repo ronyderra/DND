@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Ellipse77 from './Ellipse77.png'
 import Group73 from './Group73.png'
+import barChart6 from './barChart6.png'
 import { useState } from "react";
 import { addRow } from './slices/employeeTable'
 
@@ -22,57 +23,61 @@ export default function App() {
 
   return (
     <div className="container">
-      <DragDropContext onDragEnd={handleDragEnd}>
-        <table className="table">
-          <thead className="table-head">
-            <tr>
-              <th>אפשרויות</th>
-              <th>סך הכל שעות</th>
-              <th>שעות</th>
-              <th>שעות חריגות</th>
-              <th>שם עובד</th>
-              <th>מספר תז</th>
-            </tr>
-          </thead>
-          <Droppable droppableId="droppable-1">
-            {(provider) => (
-              <tbody
-                className="text-capitalize"
-                ref={provider.innerRef}
-                {...provider.droppableProps}
-              >
-                {employees?.map((employe, index) => (
-                  <Draggable
-                    key={employe.name}
-                    draggableId={employe.name}
-                    index={index}
-                  >
-                    {(provider) => (
-                      <tr {...provider.draggableProps} ref={provider.innerRef}>
-                        <td {...provider.dragHandleProps}><img src={Group73} /></td>
-                        <td>{employe.sumHours}</td>
-                        <td>{employe.hours}</td>
-                        <td>{employe.overLimitHours}</td>
-                        <td>{employe.name}<img className="nameImage" src={Ellipse77} /></td>
-                        <td>{employe.id}</td>
-                      </tr>
-                    )}
-                  </Draggable>
-                ))}
-                {provider.placeholder}
-              </tbody>
-            )}
-          </Droppable>
-        </table>
-      </DragDropContext>
-      <button onClick={() => dispatch(addRow({
-        "id": 316287341,
-        "name": "יואל",
-        "overLimitHours": 32,
-        "manualHours": 45,
-        "hours": 56,
-        "sumHours": 21
-      }))}>add</button>
+      <div className="table-responsive">
+        <DragDropContext onDragEnd={handleDragEnd}>
+          <table className="table">
+            <thead className="table-head">
+              <tr>
+                <th className="noWidth"></th>
+                <th className="noWidth">אפשרויות</th>
+                <th>סך הכל שעות</th>
+                <th>שעות</th>
+                <th>שעות חריגות</th>
+                <th>שם עובד</th>
+                <th>מספר תז</th>
+              </tr>
+            </thead>
+            <Droppable droppableId="droppable-1">
+              {(provider) => (
+                <tbody
+                  className="text-capitalize"
+                  ref={provider.innerRef}
+                  {...provider.droppableProps}
+                >
+                  {employees?.map((employe, index) => (
+                    <Draggable
+                      key={employe.name}
+                      draggableId={employe.name}
+                      index={index}
+                    >
+                      {(provider) => (
+                        <tr {...provider.draggableProps} ref={provider.innerRef}>
+                          <td {...provider.dragHandleProps}><img src={Group73} /></td>
+                          <td {...provider.dragHandleProps}><img src={barChart6} /></td>
+                          <td>{employe.sumHours}</td>
+                          <td>{employe.hours}</td>
+                          <td>{employe.overLimitHours}</td>
+                          <td>{employe.name}<img className="nameImage" src={Ellipse77} /></td>
+                          <td>{employe.id}</td>
+                        </tr>
+                      )}
+                    </Draggable>
+                  ))}
+                  {provider.placeholder}
+                </tbody>
+              )}
+            </Droppable>
+          </table>
+        </DragDropContext>
+        <button onClick={() => dispatch(addRow({
+          "id": 316287341,
+          "name": "יואל",
+          "overLimitHours": '4:00',
+          "manualHours": '4:00',
+          "hours": '155:00',
+          "sumHours": '159:00'
+        }))}>add</button>
+      </div>
     </div>
   );
 }

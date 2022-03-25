@@ -1,12 +1,15 @@
 .App {
   text-align: center;
-
 }
 
 td, th {
- 
   border: 1px solid black;
   background: #F6F6F6;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .table-head {
@@ -20,7 +23,7 @@ tbody {
 
 th {
   font-family: Rubik;
-  font-style: normal ;
+  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -29,12 +32,17 @@ th {
   letter-spacing: 0.03em;
   text-transform: capitalize;
 }
-td{
+
+.noWidth {
+  width: 0%;
+}
+
+td {
   text-align: end;
 }
-tr{
+tr {
   text-align: end;
 }
-.nameImage{
+.nameImage {
   padding-left: 30%;
 }
