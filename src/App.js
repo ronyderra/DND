@@ -17,15 +17,17 @@ export default function App() {
     setUsers(tempData);
   };
   return (
-    <div className="App mt-4">
+    <div className="container">
       <DragDropContext onDragEnd={handleDragEnd}>
-        <table className="table borderd">
+        <table className="table">
           <thead>
             <tr>
-              <th />
-              <th>Username</th>
-              <th>Age</th>
-              <th>Gender</th>
+            <th>אפשרויות</th>
+              <th>סך הכל שעות</th>
+              <th>שעות</th>
+              <th>שעות חריגות</th>
+              <th>שם עובד</th>
+              <th>מספר תז</th>
             </tr>
           </thead>
           <Droppable droppableId="droppable-1">
@@ -44,9 +46,11 @@ export default function App() {
                     {(provider) => (
                       <tr {...provider.draggableProps} ref={provider.innerRef}>
                         <td {...provider.dragHandleProps}> = </td>
+                        <td>{user.sumHours}</td>
+                        <td>{user.hours}</td>
+                        <td>{user.overLimitHours}</td>
                         <td>{user.name}</td>
-                        <td>{user.age}</td>
-                        <td>{user.gender}</td>
+                        <td>{user.id}</td>
                       </tr>
                     )}
                   </Draggable>
