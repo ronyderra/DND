@@ -22,7 +22,7 @@ export default function App() {
         <table className="table">
           <thead>
             <tr>
-            <th>אפשרויות</th>
+              <th>אפשרויות</th>
               <th>סך הכל שעות</th>
               <th>שעות</th>
               <th>שעות חריגות</th>
