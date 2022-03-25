@@ -12,7 +12,5 @@ export const employeeTableSlice = createSlice({
     },
 })
 
-// Action creators are generated for each case reducer function
 export const { addRow } = employeeTableSlice.actions
-
 export default employeeTableSlice.reducer
