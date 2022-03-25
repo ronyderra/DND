@@ -1,20 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit'
 import tempData from '../tempData.json'
 
+const initialState = tempData;
 export const employeeTableSlice = createSlice({
     name: 'employeeTable',
-    initialState: tempData,
+    initialState,
     reducers: {
-        addRow: (state) => {
-            state.value += 1
-        },
-        deleteRow: (state) => {
-            state.value -= 1
+        addRow: (state, action) => {
+            state.push(action.payload)
         },
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { addRow, deleteRow } = employeeTableSlice.actions
+export const { addRow } = employeeTableSlice.actions
 
 export default employeeTableSlice.reducer

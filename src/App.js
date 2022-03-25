@@ -5,10 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Ellipse77 from './Ellipse77.png'
 import Group73 from './Group73.png'
 import { useState } from "react";
+import { addRow } from './slices/employeeTable'
 
 export default function App() {
   const employeeTableData = useSelector((state) => state.employeeTable.data)
   const [employees, setEmployees] = useState(employeeTableData);
+  const dispatch = useDispatch()
 
   const handleDragEnd = (e) => {
     if (!e.destination) return;
@@ -22,16 +24,16 @@ export default function App() {
     <div className="container">
       <DragDropContext onDragEnd={handleDragEnd}>
         <table className="table">
-              <thead className="table-head">
-                <tr>
-                  <th>אפשרויות</th>
-                  <th>סך הכל שעות</th>
-                  <th>שעות</th>
-                  <th>שעות חריגות</th>
-                  <th>שם עובד</th>
-                  <th>מספר תז</th>
-                </tr>
-              </thead>
+          <thead className="table-head">
+            <tr>
+              <th>אפשרויות</th>
+              <th>סך הכל שעות</th>
+              <th>שעות</th>
+              <th>שעות חריגות</th>
+              <th>שם עובד</th>
+              <th>מספר תז</th>
+            </tr>
+          </thead>
           <Droppable droppableId="droppable-1">
             {(provider) => (
               <tbody
@@ -63,6 +65,14 @@ export default function App() {
           </Droppable>
         </table>
       </DragDropContext>
+      <button onClick={() => dispatch(addRow({
+        "id": 316287341,
+        "name": "יואל",
+        "overLimitHours": 32,
+        "manualHours": 45,
+        "hours": 56,
+        "sumHours": 21
+      }))}>add</button>
     </div>
   );
 }
