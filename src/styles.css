@@ -1,5 +1,38 @@
 .App {
   text-align: center;
+ 
 }
 
+td, th {
+ 
+  border: 1px solid black;
+  background: #F6F6F6;
+}
 
+.table-head {}
+
+tbody {
+  background-color: #F6F6F6;
+  border-top: none !important;
+}
+
+th {
+  font-family: Rubik;
+  font-style: normal ;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+}
+td{
+  text-align: end;
+}
+tr{
+  text-align: end;
+}
+.nameImage{
+  padding-left: 30%;
+}

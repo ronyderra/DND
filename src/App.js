@@ -2,6 +2,8 @@ import "./styles.css";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { useSelector, useDispatch } from 'react-redux'
 import "bootstrap/dist/css/bootstrap.min.css";
+import Ellipse77 from './Ellipse77.png'
+import Group73 from './Group73.png'
 import { useState } from "react";
 
 export default function App() {
@@ -20,7 +22,7 @@ export default function App() {
     <div className="container">
       <DragDropContext onDragEnd={handleDragEnd}>
         <table className="table">
-          <thead>
+          <thead className="table-head">
             <tr>
               <th>אפשרויות</th>
               <th>סך הכל שעות</th>
@@ -45,11 +47,11 @@ export default function App() {
                   >
                     {(provider) => (
                       <tr {...provider.draggableProps} ref={provider.innerRef}>
-                        <td {...provider.dragHandleProps}> = </td>
+                        <td {...provider.dragHandleProps}><img src={Group73} /></td>
                         <td>{user.sumHours}</td>
                         <td>{user.hours}</td>
                         <td>{user.overLimitHours}</td>
-                        <td>{user.name}</td>
+                        <td>{user.name}<img className="nameImage" src={Ellipse77} /></td>
                         <td>{user.id}</td>
                       </tr>
                     )}

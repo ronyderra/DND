@@ -4,7 +4,7 @@
     "data": [
       {
         "id": 316287341,
-        "name": "Jeevan",
+        "name": "ראובן",
         "overLimitHours": 32,
         "manualHours": 45,
         "hours": 56,
@@ -12,7 +12,7 @@
       },
       {
         "id": 316287341,
-        "name": "Sam",
+        "name": "תומר",
         "overLimitHours": 32,
         "manualHours": 45,
         "hours": 56,
@@ -20,7 +20,7 @@
       },
       {
         "id": 316287341,
-        "name": "Tom",
+        "name": "שרון",
         "overLimitHours": 32,
         "manualHours": 45,
         "hours": 56,
@@ -28,7 +28,7 @@
       },
       {
         "id": 316287341,
-        "name": "Ruben",
+        "name": "חיים",
         "overLimitHours": 32,
         "manualHours": 45,
         "hours": 56,
@@ -36,7 +36,7 @@
       },
       {
         "id": 316287341,
-        "name": "Levi",
+        "name": "סימון",
         "overLimitHours": 32,
         "manualHours": 45,
         "hours": 56,
