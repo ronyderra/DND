@@ -1,6 +1,6 @@
 .App {
   text-align: center;
- 
+
 }
 
 td, th {
@@ -9,7 +9,9 @@ td, th {
   background: #F6F6F6;
 }
 
-.table-head {}
+.table-head {
+  margin-top: 15;
+}
 
 tbody {
   background-color: #F6F6F6;
